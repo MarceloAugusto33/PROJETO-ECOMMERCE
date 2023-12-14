@@ -228,6 +228,12 @@ footer{
 }
 footer h1{
     color: #0766fe;
+    margin: 20px 0px;
+    font-size: 1.4rem;
+}
+footer h2{
+    margin: 15px 0px;
+    font-size: 1.1rem;
 }
 footer a{
     text-decoration: none;
