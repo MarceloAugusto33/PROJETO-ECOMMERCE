@@ -15,19 +15,17 @@ function buscarProduto(){
         containerProdutos.innerHTML = `<h1>Produto não encontrado</h1>`
     } else{
         containerProdutos.innerHTML = ""
-        fetch("../src/json/produtos.json")
+        fetch("../json/produtos.json")
             .then((response) =>{
                 return response.json();
             })
             .then((jsonData) => {
                 let produtos = jsonData.produtos;
-                let p = produtos.filter((e) => e.nome.toUpperCase().includes(inputBusca.toUpperCase()))
-                console.log(p)
-
-                if (p.length == 0){
+                let pesquisados = produtos.filter((e) => e.nome.toUpperCase().includes(inputBusca.toUpperCase()))
+                if (pesquisados.length == 0){
                     containerProdutos.innerHTML = `<h1>Produto não encontrado</h1>`
                 } else{
-                    p.map((produto) => {
+                    pesquisados.map((produto) => {
                     containerProdutos.innerHTML += `
                         <div class="card" id="${produto.id}">
                             <img src="${produto.imagem}" alt="foto produto">
@@ -37,6 +35,9 @@ function buscarProduto(){
                         </div>`
                     })
                 }
+            })
+            .catch(()=>{
+                console.log('url ERRADA')
             })
     }
 }
@@ -58,7 +59,7 @@ function mostrarProdutos(){
     document.querySelector('#input-busca').value = ""
     cancelarBusca.style.display = "none"
 
-    fetch("../src/json/produtos.json")
+    fetch("../json/produtos.json")
         .then((response) =>{
             return response.json();
         })
@@ -79,5 +80,6 @@ function mostrarProdutos(){
         })
         .catch(() =>{
             containerProdutos.innerHTML = `<h1>Sem produtos<h1>`
+            console.log('url ERRADA')
         })
 }
