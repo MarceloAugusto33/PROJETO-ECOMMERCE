@@ -62,7 +62,7 @@ function verificarCarrinho() {
         });
         qtdItensCarrinho.innerHTML = index
     }
-    return valorTotal.innerHTML = `R$ ${contador.toFixed(2)}`
+    return valorTotal.innerHTML = `${contador.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
 }
 
 
