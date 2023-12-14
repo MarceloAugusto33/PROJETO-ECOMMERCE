@@ -27,16 +27,14 @@ function buscarProduto(){
                 if (p.length == 0){
                     containerProdutos.innerHTML = `<h1>Produto não encontrado</h1>`
                 } else{
-                    let id = 1
                     p.map((produto) => {
                     containerProdutos.innerHTML += `
                         <div class="card" id="${produto.id}">
                             <img src="${produto.imagem}" alt="foto produto">
                             <h3>${produto.nome}</h3>
                             <h4>${produto.preco}</h4>
-                            <button onclick='addCarrinho(${id})'>COMPRAR</button>
+                            <button onclick='addCarrinho(${produto.id})'>COMPRAR</button>
                         </div>`
-                        id ++
                     })
                 }
             })
@@ -56,11 +54,16 @@ function verificarNulo(valor){
 //FUNÇAO PARA PEGAR OS PRODUTOS DO JSON
 function mostrarProdutos(){
     let containerProdutos = document.querySelector('.flex');
+    let cancelarBusca = document.querySelector('.cancelarBusca');
+    document.querySelector('#input-busca').value = ""
+    cancelarBusca.style.display = "none"
+
     fetch("../src/json/produtos.json")
         .then((response) =>{
             return response.json();
         })
         .then((jsonData) => {
+            containerProdutos.innerHTML = ""
             listaProdutos = jsonData.produtos
             let id = 1
             listaProdutos.map((produto) => {

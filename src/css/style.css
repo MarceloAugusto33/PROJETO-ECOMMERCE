@@ -35,6 +35,7 @@ header{
     right: 0;
     color: white;
     padding: 1rem;
+    text-decoration: none;
 }
 .overlay{
     position: fixed;
@@ -46,6 +47,9 @@ header{
     background-color: #333;
     transition: all 0.3s ease-in-out;
     overflow-y: auto;
+}
+button{
+    cursor: pointer;
 }
 .produtosCarrinho{
     color: white;
@@ -171,6 +175,8 @@ main > h2{
 .cancelarBusca{
     text-align: end;
     display: none;
+    text-decoration: underline;
+    cursor: pointer;
 }
 div.flex{
     display: flex;
@@ -183,6 +189,7 @@ div.card{
     margin: 10px 0px;
     border: 1px solid rgba(0, 0, 0, 0.14);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.102);
+    transition: all 0.4s ease-in-out;
 }
 div.card > img{
     width: 100%;
@@ -211,6 +218,24 @@ div.card > button{
 }
 div.card > button:hover{
     background-color: rgb(62, 211, 43);
+}
+footer{
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+footer h1{
+    color: #0766fe;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: rgb(122, 122, 122);
 }
 @media screen and (min-width:768px){
     div.card{

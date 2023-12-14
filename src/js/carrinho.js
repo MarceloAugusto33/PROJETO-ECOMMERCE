@@ -5,7 +5,7 @@ function openNav(){
     if (larguraDaTela < 768){
         carrinho.style.width = "60%"
     } else{
-        carrinho.style.width = "30%"
+        carrinho.style.width = "20%"
     }
     
 }
@@ -33,7 +33,7 @@ function addCarrinho(id) {
     if (larguraDaTela < 768){
         carrinho.style.width = "60%"
     } else{
-        carrinho.style.width = "30%"
+        carrinho.style.width = "20%"
     }
 }
 
@@ -62,7 +62,7 @@ function verificarCarrinho() {
         });
         qtdItensCarrinho.innerHTML = index
     }
-    return valorTotal.innerHTML = `R$ ${contador}`
+    return valorTotal.innerHTML = `R$ ${contador.toFixed(2)}`
 }
 
 
