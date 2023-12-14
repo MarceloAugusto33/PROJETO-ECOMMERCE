@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <title>ECOMMERCE</title>
+</head>
+<body>
+    <div class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="produtosCarrinho">
+            <h1>Carrinho <span class="material-symbols-outlined">shopping_cart</span></h1>
+            <h2>Produtos</h2>
+            <hr>
+            <div class="campoTotal">
+                <div class="icon">
+                    <span class="material-symbols-outlined">credit_card</span>
+                    <h3>Total: </h3>
+                </div>
+                <p id="valorTotal">0</p>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><a href="index.html">ElecHub</a></h1>
+            </div>
+            <div class="carrinho" onclick="openNav()">
+                
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <h3 class="qtdItensCarrinho">0</h3>
+            </div>
+        </nav>
+    </header>
+    <section id="banner">
+    </section>
+    <main>
+        <h1>LOJA</h1>
+        <div class="filtro">
+            <h2>Produtos</h2>
+            <div class="buscar">
+                <input type="text" id="input-busca" placeholder="Buscar produto...">
+                <button onclick="buscarProduto()" id="botaoBuscar">
+                    <span class="material-symbols-outlined" id="simboloBuscar">
+                        search
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div>
+            <a href="index.html" class="cancelarBusca">Cancelar Filtro</a>
+        </div>
+        <div class="flex">
+            
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="src/js/produtos.js"></script>
+    <script src="src/js/carrinho.js"></script>
+</body>
+</html>

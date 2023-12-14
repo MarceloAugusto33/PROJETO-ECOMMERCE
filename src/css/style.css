@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+}
+header{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.208);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.logo > h1 > a{
+    text-decoration: none;
+    color: #333;
+}
+.nav-bar{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.carrinho{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay > a{
+    font-size: 4em;
+    right: 0;
+    color: white;
+    padding: 1rem;
+}
+.overlay{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 10;
+    width: 0;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto;
+}
+.produtosCarrinho{
+    color: white;
+    padding: 1rem;
+}
+.cardCarrinho{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+.descProduto > img{
+    width: 40%;
+    height: 120px;
+    object-fit: contain;
+    width: 100%;
+}
+.descProduto > h3{
+    padding: 0rem 1rem;
+}
+.descProduto > p{
+    padding: 0rem 1rem;
+}
+.descProduto > button{
+    height: 40px;
+    width: 100%;
+    background-color: red;
+    border: none;
+    transition: all 0.4s;
+}
+.descProduto > button:hover{
+    background-color: rgb(146, 0, 0);
+    color: white;
+}
+#valorTotal{
+    color: rgb(2, 197, 2);
+}
+
+.quantProduto{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+.quantProduto > button{
+    width: 30px;
+    height: 30px;
+    background-color: #0766fe;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+
+.quantProduto > p{
+    font-size: 1.5em;
+}
+.campoTotal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+#banner{
+    height: 150px;
+    background: white url("../img/bannerloja.png") no-repeat center;
+    background-size: cover;
+}
+main{
+    margin: 30px 0px;
+    padding: 1.2rem;
+}
+main > h1{
+    margin: 10px 0px 20px 0px;
+    font-size: 3em;
+    text-align: center;
+}
+div.filtro{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.102);
+}
+.buscar{
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.239);
+    width: 100%;
+    justify-content: end;
+}
+.buscar > input{
+    padding: 1rem;
+    width: 100%;
+    border: none;
+}
+.buscar > input:focus{
+    outline: none;
+}
+.buscar > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 50px;
+    background-color: greenyellow;
+    padding: 0rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+main > h2{
+    margin: 10px 0px 10px 0px;
+    font-size: 2em;
+}
+.cancelarBusca{
+    text-align: end;
+    display: none;
+}
+div.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+}
+div.card{
+    width:100%;
+    margin: 10px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.102);
+}
+div.card > img{
+    width: 100%;
+    object-fit: contain;
+    height: 200px;
+}
+div.card > h3{
+    padding: 0rem 1rem;
+    margin: 20px 0px;
+    color: #1E3A8A;
+}
+div.card > h4{
+    padding: 0rem 1rem;
+    color: #515151;
+}
+div.card > button{
+    width: 100%;
+    background-color: rgb(71, 255, 47);
+    border: none;
+    height: 50px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+div.card > button:hover{
+    background-color: rgb(62, 211, 43);
+}
+@media screen and (min-width:768px){
+    div.card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+    }
+    #banner{
+        height: 450px;
+    }
+    div.filtro{
+        flex-direction: row;
+    }
+    .buscar{
+        width: 20%;
+    }
+    div.flex{
+        justify-content: space-between;
+    }
+    .overlay{
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 10;
+        width: 0%;
+        background-color: #333;
+        transition: all 0.3s ease-in-out;
+    }
+    .produtosCarrinho{
+        color: white;
+    }
+}

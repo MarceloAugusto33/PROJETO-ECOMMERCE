@@ -1,0 +1,64 @@
+{
+    "produtos": [
+        {
+            "imagem":"https://m.media-amazon.com/images/I/61H-DMmO+SL._AC_SX679_.jpg",
+            "nome":"Apple iPhone 13 (256 GB)",
+            "preco":"4599.00",
+            "id":"1"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/61HfpqOu1RL._AC_SX679_.jpg",
+            "nome":"Console PlayStation® 5",
+            "preco":"3719.00",
+            "id":"2"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/61uxHT2J1sL._AC_SX679_.jpg",
+            "nome":"Console PlayStation® 4",
+            "preco":"2990.00",
+            "id":"3"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/61eYoSqkHnL._AC_SX679_.jpg",
+            "nome":"Console Xbox Series X",
+            "preco":"4400.00",
+            "id":"4"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/61qK-bHdzLL._AC_SX425_.jpg",
+            "nome":"Console Nintendo Switch Joy-Con",
+            "preco":"1829.00",
+            "id":"5"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/71sV-QnV8TL._AC_SX679_.jpg",
+            "nome":"Headphone Fone de Ouvido Havit HV-H2002d",
+            "preco":"149.00",
+            "id":"6"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/51gz+-45-CL._AC_SX679_.jpg",
+            "nome":"Mouse Gamer Razer Deathadder Essential White Edition",
+            "preco":"138.00",
+            "id":"7"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/61IVFGkcREL._AC_SX679_.jpg",
+            "nome":"Monitor Gamer AOC Hero 24' 144Hz IPS 1ms ",
+            "preco":"809.11",
+            "id":"8"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/61PrCgQ2KwL._AC_SX679_.jpg",
+            "nome":"Notebook Lenovo IdeaPad 3i i3-1115G4 4GB 256GB SSD",
+            "preco":"2290.00",
+            "id":"9"
+        },
+        {
+            "imagem":"https://m.media-amazon.com/images/I/61-ac8g9v-L._AC_SX679_.jpg",
+            "nome":"HUION HS611 Tablet de desenho gráfico",
+            "preco":"423.00",
+            "id":"10"
+        }
+    ]
+}
