@@ -15,7 +15,7 @@ function buscarProduto(){
         containerProdutos.innerHTML = `<h1>Produto não encontrado</h1>`
     } else{
         containerProdutos.innerHTML = ""
-        fetch("data/produtos.json")
+        fetch("https://marceloaugusto33.github.io/PROJETO-ECOMMERCE/data/produtos.json")
             .then((response) =>{
                 return response.json();
             })
@@ -59,7 +59,7 @@ function mostrarProdutos(){
     document.querySelector('#input-busca').value = ""
     cancelarBusca.style.display = "none"
 
-    fetch("data/produtos.json")
+    fetch("https://marceloaugusto33.github.io/PROJETO-ECOMMERCE/data/produtos.json")
         .then((response) =>{
             return response.json();
         })
