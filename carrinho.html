@@ -36,7 +36,7 @@
         </section>
         <section class="cep">
             <h2>Insira o Cep para finalizar sua compra!</h2>
-            <form>
+            <div class="form">
                 <label for="input-cep"><span class="material-symbols-outlined">location_on</span>CEP: </label>
                 <input type="number" placeholder="Insira seu cep..." id="input-cep" required onkeydown="evitarEnvioComEnter(event)">
                 <p id="erro"></p>
@@ -46,6 +46,24 @@
             </div>
         </section>
     </section>
+    <div class="modal">
+        <div class="modalContainer">
+            <div class="modalConteudo">
+                <h3>COMPRA CONCLUIDA!</h3>
+                <div class="status">
+                    <div class="circulo"><span class="material-symbols-outlined">home</span></div>
+                    <hr>
+                    <div class="circulo"><span class="material-symbols-outlined">shopping_cart</span></div>
+                    <hr>
+                    <div class="circulo"><span class="material-symbols-outlined">done</span></div>
+                </div>
+                <div class="compra">
+                    <span class="material-symbols-outlined">check_circle</span>
+                </div>
+                <a href="index.html"><button >PAGINA INICIAL</button></a>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="links">
             <h1>links Uteis</h1>

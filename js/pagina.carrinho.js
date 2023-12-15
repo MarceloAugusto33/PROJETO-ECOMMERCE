@@ -1,7 +1,6 @@
 if(verificarNuloLocalStorage()){
-    window.location.href = '../index.html'
+    window.location.href = 'index.html'
 }
-
 function evitarEnvioComEnter(event) {
     
     if (event.keyCode === 13) {
@@ -84,9 +83,10 @@ function buscarCEP() {
                         </div>
                         <p id="valor-final">${valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     </div>
-                    <button id="finalizarCompra" type="submit">FINALIZAR COMPRA</button>
-                    </form>
+                    <button id="finalizarCompra" onclick="abrirModal()" type="button">FINALIZAR COMPRA</button>
+                    </div>
                     `
+                location.href ="#input-cep"
                 } else{
                     endereco.innerHTML = ""
                     paragrafoErro.innerHTML = "CEP INCORRETO"
@@ -98,4 +98,24 @@ function buscarCEP() {
             })
 
     }
+}
+
+function inicio() {
+    window.location.href = "index.html"
+}
+
+
+function abrirModal(){
+    document.querySelector('.modal').style.display = "flex"
+    let larguraDaTela = window.innerWidth;
+    
+    setInterval(()=> {
+        if (larguraDaTela > 1000){
+            document.querySelector('.modalContainer').style.width = "50%"
+        } else{
+            document.querySelector('.modalContainer').style.width = "80%"
+        }
+    },50)
+    
+    document.body.style.overflow = "hidden"
 }
