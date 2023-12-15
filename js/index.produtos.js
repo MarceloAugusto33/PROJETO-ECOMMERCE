@@ -1,6 +1,6 @@
-
 document.addEventListener('DOMContentLoaded',() => {
-    mostrarProdutos()
+    mostrarProdutos();
+    localStorage.removeItem('Carrinho')
 })
 
 //FUNÇAO PARA BUSCAR OS PRODUTOS FILTRADOS

@@ -1,4 +1,5 @@
 let carrinho = document.querySelector('.overlay')
+let listaCarrinho = []
 //FUNÇAO DE ABRIR O CARRINHO
 function openNav(){
     let larguraDaTela = window.innerWidth;
@@ -19,6 +20,7 @@ function closeNav(){
 //FUNÇAO DE ADICIONAR AO CARRINHO
 let campoProduto = document.querySelector('.produtosCarrinho');
 function addCarrinho(id) {
+    
     let produto = document.getElementById(id);
     campoProduto.innerHTML += `
         <div class="cardCarrinho" id="n${id}">
@@ -29,8 +31,9 @@ function addCarrinho(id) {
                 <button onclick="remove('n${id}')">Remover</button>
             </div>
         </div>`;
-        verificarCarrinho();
         openNav();
+        listaCarrinho.push(`${id}`)
+        verificarCarrinho();
 }
 
 //funçao para que quando mudar de resoluçao, o tamanho do carrinho se ajuste
@@ -50,6 +53,10 @@ window.addEventListener('resize',() => {
 function remove(id){
     let produto = document.getElementById(id)
     produto.remove();
+    let index = listaCarrinho.indexOf(id.slice(1));
+    if (index != -1){
+        listaCarrinho.splice(index,1);
+    }
     verificarCarrinho();
 }
 
@@ -60,14 +67,17 @@ function verificarCarrinho() {
     let produtosNoCarrinho = document.querySelectorAll('.cardCarrinho');
     let qtdItensCarrinho = document.querySelector('.qtdItensCarrinho')
     let btnRemoveItens = document.querySelector('#remove-all')
+    let btnCompra = document.querySelector('#btnCompra')
     let index = 0
     if(produtosNoCarrinho.length == 0){
-        contador = 0
         qtdItensCarrinho.innerHTML = index
+        btnCompra.style.display = "none"
+
     } else{
         produtosNoCarrinho.forEach((produto) => {
                 let preco = produto.querySelector('p').innerText;
                 contador = contador + Number(preco)
+                console.log(contador)
                 index ++
         });
         qtdItensCarrinho.innerHTML = index
@@ -76,7 +86,10 @@ function verificarCarrinho() {
         } else{
             btnRemoveItens.style.display = "none"
         }
+        btnCompra.style.display = "block"
+
     }
+    localStorage.setItem('Carrinho',JSON.stringify(listaCarrinho))
     return valorTotal.innerHTML = `${contador.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
 }
 
@@ -86,12 +99,13 @@ function esvaziarCarrinho(){
         produtosNoCarrinho.forEach((produto) => {
             produto.remove()
             verificarCarrinho()
+            listaCarrinho = []
+            localStorage.removeItem('Carrinho')
         });
     } else{
         return
     }
 }
-
 
 
 

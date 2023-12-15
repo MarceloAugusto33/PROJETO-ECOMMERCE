@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>ElectHub</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><a href="index.html">ElecHub</a></h1>
+            </div>
+        </nav>
+    </header>
+    <h1 id="titulo">CARRINHO</h1>
+    <div class="status">
+        <div class="circulo"><span class="material-symbols-outlined">home</span></div>
+        <hr>
+        <div class="circulo"><span class="material-symbols-outlined">shopping_cart</span></div>
+        <hr>
+        <div class="circulo" id="incompleto"><span class="material-symbols-outlined">done</span></div>
+    </div>
+    <section class="container-carrinho">
+        <section class="container-produtos">
+            <article>
+                <h1>Produtos Selecionados:</h1>
+            </article>
+            <div id="pr" class="flex">
+
+            </div>
+            
+        </section>
+        <section class="cep">
+            <h2>Insira o Cep para finalizar sua compra!</h2>
+            <form>
+                <label for="input-cep"><span class="material-symbols-outlined">location_on</span>CEP: </label>
+                <input type="number" placeholder="Insira seu cep..." id="input-cep" required onkeydown="evitarEnvioComEnter(event)">
+                <p id="erro"></p>
+                <button type="button" onclick="buscarCEP()">BUSCAR CEP</button>
+            <div class="localidade">
+
+            </div>
+        </section>
+    </section>
+    <footer>
+        <div class="links">
+            <h1>links Uteis</h1>
+            <h2><a href="https://www.linkedin.com/in/marcelo-augusto-8bb411271/" target="_blank">linkedin</a></h2>
+            <h2><a href="https://github.com/MarceloAugusto33" target="_blank">github</a></h2>
+            <h2><a href="#" target="_blank">curriculo</a></h2>
+            
+        </div>
+        <div class="criador">
+            <h1>Criado por <a href="mailto:sjsjsjmarcelo@gmail.com" target="_blank">Marcelo Augusto</a></h1>
+        </div>
+    </footer>
+    <script src="js/pagina.carrinho.js"></script>
+</body>
+</html>
