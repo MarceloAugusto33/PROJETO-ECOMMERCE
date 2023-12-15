@@ -51,6 +51,19 @@ header{
 button{
     cursor: pointer;
 }
+#remove-all{
+    width: 100%;
+    background-color: red;
+    color: white;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.3s;
+    display: none;
+}
+#remove-all:hover{
+    background-color: rgb(196, 0, 0);
+}
 .produtosCarrinho{
     color: white;
     padding: 1rem;
