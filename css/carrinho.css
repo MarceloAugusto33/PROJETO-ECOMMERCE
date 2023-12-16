@@ -160,6 +160,9 @@ label{
 .modalConteudo > a{
     text-decoration: none;
 }
+.flex{
+    padding: 1rem;
+}
 @media screen and (min-width:768px){
     .container-carrinho{
         display: flex;

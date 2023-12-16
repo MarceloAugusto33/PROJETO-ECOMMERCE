@@ -14,6 +14,9 @@ function evitarEnvioComEnter(event) {
 let valor = 0
 document.addEventListener('DOMContentLoaded', () => {
     let produtosCarrinho = JSON.parse(localStorage.getItem('Carrinho'))
+    for (let i = 0; i < produtosCarrinho.length; i++){
+        produtosCarrinho[i] = `${produtosCarrinho[i]}`
+    }
     let divProdutos = document.querySelector('#pr')
     fetch('https://marceloaugusto33.github.io/PROJETO-ECOMMERCE/data/produtos.json')
         .then((response) =>{
@@ -87,6 +90,7 @@ function buscarCEP() {
                     </div>
                     `
                 location.href ="#input-cep"
+                document.querySelector("#input-cep").blur()
                 } else{
                     endereco.innerHTML = ""
                     paragrafoErro.innerHTML = "CEP INCORRETO"
