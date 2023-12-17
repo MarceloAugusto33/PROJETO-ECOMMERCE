@@ -9,34 +9,33 @@ body{
     background-color: #f8f8f8;
 }
 header{
-    background-color: white;
+    background-color: rgb(0, 102, 255);
     border: 1px solid rgba(0, 0, 0, 0.208);
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 .logo > h1 > a{
     text-decoration: none;
-    color: #333;
+    color: white;
 }
+.logo{
+    margin: auto;
+}
+
 .nav-bar{
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.carrinho{
+.btn-carrinho{
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.overlay > a{
-    font-size: 4em;
-    right: 0;
     color: white;
-    padding: 1rem;
-    text-decoration: none;
 }
 .overlay{
     position: fixed;
@@ -47,115 +46,117 @@ header{
     width: 0;
     background-color: #242726;
     transition: all 0.3s ease-in-out;
-    overflow-y: auto;
 }
-button{
-    cursor: pointer;
-}
-#remove-all{
-    width: 100%;
-    background-color: red;
-    color: white;
-    height: 40px;
-    border: none;
-    border-radius: 7px;
-    transition: all 0.3s;
-    display: none;
-}
-#remove-all:hover{
-    background-color: rgb(196, 0, 0);
-}
-.confirmarCompra{
+.overlay > a{
     padding: 1rem;
-}
-.confirmarCompra > a{
+    display: flex;
+    align-items: center;
     text-decoration: none;
-}
-#btnCompra{
-    width: 100%;
-    background-color: rgb(0, 147, 0);
+    background-color: rgb(0, 102, 255);
     color: white;
-    height: 40px;
-    border: none;
-    border-radius: 7px;
-    transition: all 0.3s;
+    gap: 2%;
+}
+.statusCompra{
     display: none;
-}
-#btnCompra:hover{
-    background-color: rgb(0, 92, 0);
-}
-
-.produtosCarrinho{
-    color: white;
+    align-items: center;
     padding: 1rem;
+    gap: 2%;
+    background-color: rgb(245, 152, 3);
+    color: white;
 }
-.cardCarrinho{
-    width: 100%;
-    border: 1px solid black;
+.statusCompra > span{
+    font-size: 2em;
+}
+.statusCompra > h3{
+    font-size: 16px;
+}
+.carrinho{
+    height: 80%;
     display: flex;
     flex-direction: column;
-    margin: 20px 0px;
-    background-color: white;
-    color: black;
-    border-radius: 12px;
-    overflow: hidden;
-}
-.descProduto > img{
-    width: 40%;
-    height: 120px;
-    object-fit: contain;
-    width: 100%;
-}
-.descProduto > h3{
-    padding: 0rem 1rem;
-}
-.descProduto > p{
-    padding: 0rem 1rem;
-}
-.descProduto > button{
-    height: 40px;
-    width: 100%;
-    background-color: red;
-    border: none;
-    transition: all 0.4s;
+    justify-content: space-between;
     color: white;
-}
-.descProduto > button:hover{
-    background-color: rgb(146, 0, 0);
-    color: white;
-}
-#valorTotal{
-    color: rgb(2, 197, 2);
+    width: 100%;
 }
 
-.quantProduto{
+.container-produtos{
+    overflow-y: auto;
+}
+
+
+/*Container dos produtos */
+
+.lista-produtos > li{
     display: flex;
-    gap: 5%;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 0.5rem;
 }
-.quantProduto > button{
-    width: 30px;
-    height: 30px;
-    background-color: #0766fe;
-    color: white;
-    border: none;
-    border-radius: 7px;
+.item-produto{
+    width: 85%;
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 1%;
+}
+.img-produto{
+    width: 20%;
+}
+.img-produto > img{
+    object-fit: contain;
+    height: 60px;
+    width: 100%;
+}
+.nome-produto{
+    width: 50%;
+    height: fit-content;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    color: #cecece;
+}
+.preco-produto{
+    width: 30%;
+    font-size: 14px;
+    overflow-wrap: break-word;
+    color: azure;
+}
+.deleta-produto{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    cursor: pointer;
+
 }
 
-.quantProduto > p{
-    font-size: 1.5em;
+/* FIM Container dos produtos */
+.container-total{
+    padding: 1rem;
+    border-top: 1px solid white;
 }
-.campoTotal{
+.valor-total{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.2em;
 }
-.icon{
-    display: flex;
-    align-items: center;
-    gap: 5%;
+.valor-total > output{
+    color: rgb(5, 229, 5);
+}
+.container-total > button{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    color: white;
+    background-color: rgb(0, 123, 0);
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.container-total > button:hover{
+    background-color: rgb(1, 88, 1);
+}
+
+button{
+    cursor: pointer;
 }
 #banner{
     height: 150px;

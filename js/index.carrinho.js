@@ -1,152 +1,144 @@
 let carrinho = document.querySelector('.overlay')
+
 let listaCarrinho = []
 //FUNÇAO DE ABRIR O CARRINHO
-function openNav(){
+function openNav() {
     let larguraDaTela = window.innerWidth;
-    if (larguraDaTela < 1000){
-        carrinho.style.width = "70%"
-    } else{
-        carrinho.style.width = "20%"
+    if (larguraDaTela < 1000) {
+        carrinho.style.width = "85%"
+        document.body.style.overflow = "hidden"
+    } else {
+        carrinho.style.width = "30%"
+
     }
     carrinho.classList.add('.open');
 }
 
 //FUNÇAO DE FECHAR O CARRINHO
-function closeNav(){
+function closeNav() {
     carrinho.style.width = "0"
     carrinho.classList.remove('.open')
+    document.body.style.overflow = "auto"
 }
 
 //FUNÇAO DE ADICIONAR AO CARRINHO
-let campoProduto = document.querySelector('.produtosCarrinho');
-function addCarrinho(id) {
-    let modalStatus = document.querySelector('#modalStatus')
-    let produto = document.getElementById(id);
-    if (listaCarrinho.includes(id)){
-        console.log('produto ja existe')
-        modalStatus.innerHTML = "PRODUTO JA EXISTE NO CARRINHO"
-        modalStatus.style.color = "black"
-        document.querySelector('.modalContainer').style.backgroundColor = "rgb(255, 183, 3)"
-        abrirModal();
-        return
-    } else{
-        listaCarrinho.push(id)
-        modalStatus.innerHTML = "PRODUTO ADICIONADO AO CARRINHO"
-        modalStatus.style.color = "white"
-        document.querySelector('.modalContainer').style.backgroundColor = "rgba(0, 201, 0, 0.759)"
-        campoProduto.innerHTML += `
-        <div class="cardCarrinho" id="${id}">
-            <div class="descProduto">
-                <img src="${produto.querySelector('img').src}" alt="">
-                <h3>${produto.querySelector('h3').innerHTML}</h3>
-                <p>${produto.querySelector('h4').innerHTML}</p>
-                <button onclick="remove(${id})">Remover</button>
-            </div>
-        </div>`;
-        abrirModal()
-        console.log('produto nao existe')
-    }
-    verificarCarrinho();
-    console.log(listaCarrinho)
 
+function addCarrinho(id) {
+    let icon = document.querySelector('#statusIcon');
+    let texto = document.querySelector('#statusText');
+    let modal = document.querySelector('.statusCompra')
+    if (listaCarrinho.includes(id)) {
+        texto.innerHTML = "PRODUTO JA ADICIONADO AO CARRINHO!"
+        icon.innerHTML = "block"
+        modal.style.backgroundColor = "rgb(245, 152, 3)"
+        modal.style.display = "flex"
+    } else {
+        texto.innerHTML = "PRODUTO ADICIONADO NO CARRINHO!"
+        icon.innerHTML = "check_circle"
+        modal.style.backgroundColor = "rgb(0, 199, 0)";
+        modal.style.display = "flex"
+        let campoProduto = document.querySelector('.lista-produtos');
+        let produto = document.getElementById(id);
+        listaCarrinho.push(id);
+        campoProduto.innerHTML += `
+            <li id="${id}" class="li-produto">
+                <div class="item-produto">
+                    <div class="img-produto">
+                        <img src="${produto.querySelector('img').src}" alt="foto produto">
+                    </div>
+                    <div class="nome-produto">${produto.querySelector('h3').innerHTML}</div>
+                    <div class="preco-produto">${produto.querySelector('h4').innerHTML}</div>
+                </div>
+                <div class="deleta-produto" onclick="remove(${id})">
+                    <span class="material-symbols-outlined">delete</span>
+                </div>
+            </li>
+            
+            `;
+    }
+    openNav()
+    verificarCarrinho()
 }
 
 //funçao para que quando mudar de resoluçao, o tamanho do carrinho se ajuste
-window.addEventListener('resize',() => {
-    if(carrinho.classList.contains('.open')){
+window.addEventListener('resize', () => {
+    if (carrinho.classList.contains('.open')) {
         let larguraDaTela = window.innerWidth;
-        if (larguraDaTela < 1000){
-            carrinho.style.width = "70%"
-        } else{
-            carrinho.style.width = "20%"
+        if (larguraDaTela < 1000) {
+            carrinho.style.width = "85%"
+        } else {
+            carrinho.style.width = "30%"
         }
     }
 })
 
 
 //FUNÇAO DE REMOVER DO CARRINHO
-function remove(id){
+
+function remove(id) {
+    let icon = document.querySelector('#statusIcon');
+    let texto = document.querySelector('#statusText');
+    let modal = document.querySelector('.statusCompra')
+    modal.style.display = "flex"
+    texto.innerHTML = "PRODUTO REMOVIDO DO CARRINHO!"
+    icon.innerHTML = "close"
+    modal.style.backgroundColor = "red"
+
     let produto = document.getElementById(id)
+
     produto.remove();
+
     let index = listaCarrinho.indexOf(id);
-    if (index != -1){
-        listaCarrinho.splice(index,1);
+    if (index != -1) {
+        listaCarrinho.splice(index, 1);
     }
-    verificarCarrinho();
+    verificarCarrinho()
 }
 
 //FUNÇAO PARA VERIFICAR OS ITENS DO CARRINHO E O SEU VALOR
 function verificarCarrinho() {
     let contador = 0
-    let valorTotal = document.querySelector('#valorTotal');
-    let produtosNoCarrinho = document.querySelectorAll('.cardCarrinho');
+    let produtosNoCarrinho = document.querySelectorAll('.li-produto');
     let qtdItensCarrinho = document.querySelector('.qtdItensCarrinho')
-    let btnRemoveItens = document.querySelector('#remove-all')
-    let btnCompra = document.querySelector('#btnCompra')
+    let valorT = document.querySelector('#valorT')
     let index = 0
-    if(produtosNoCarrinho.length == 0){
+    if (produtosNoCarrinho.length == 0) {
         qtdItensCarrinho.innerHTML = index
-        btnCompra.style.display = "none"
+        let modal = document.querySelector('.statusCompra')
+        modal.style.display = "none"
 
-    } else{
+    } else {
+
         produtosNoCarrinho.forEach((produto) => {
-                let preco = produto.querySelector('p').innerText;
-                contador = contador + Number(preco)
-                index ++
+            let div = produto.querySelector('.item-produto');
+            let valor = div.querySelector('.preco-produto').innerHTML;
+            let valorEmNumero = valor.replace(/[^\d,]/g, '');
+
+            valorEmNumero = parseFloat(valorEmNumero);
+
+            contador = contador + Number(valorEmNumero);
+            index++
+
         });
+
         qtdItensCarrinho.innerHTML = index
-        if(index > 1){
-            btnRemoveItens.style.display = "block"
-        } else{
-            btnRemoveItens.style.display = "none"
-        }
-        btnCompra.style.display = "block"
 
     }
-    localStorage.setItem('Carrinho',JSON.stringify(listaCarrinho))
-    return valorTotal.innerHTML = `${contador.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
+    localStorage.setItem('Carrinho', JSON.stringify(listaCarrinho))
+    return valorT.innerHTML = `${Number(contador).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
 }
 
-function esvaziarCarrinho(){
-    let produtosNoCarrinho = document.querySelectorAll('.cardCarrinho');
-    if(produtosNoCarrinho.length > 0){
-        produtosNoCarrinho.forEach((produto) => {
-            produto.remove()
-            verificarCarrinho()
-            listaCarrinho = []
-            localStorage.removeItem('Carrinho')
-        });
-    } else{
-        return
+
+function finalizarCompra() {
+    if (listaCarrinho.length > 0) {
+        window.location.href = 'carrinho.html'
+    } else {
+        let icon = document.querySelector('#statusIcon');
+        let texto = document.querySelector('#statusText');
+        let modal = document.querySelector('.statusCompra')
+        modal.style.display = "flex"
+        texto.innerHTML = "CARRINHO VAZIO!"
+        icon.innerHTML = "shopping_cart"
+        modal.style.backgroundColor = "#242726"
     }
 }
-
-function abrirModal(){
-    document.querySelector('.modalContainer').style.display = "block"
-    let larguraDaTela = window.innerWidth;
-    closeNav();
-    
-    setTimeout(()=> {
-        if (larguraDaTela > 1000){
-            document.querySelector('.modalContainer').style.width = "20%"
-        } else{
-            document.querySelector('.modalContainer').style.width = "80%"
-        }
-    },50)
-
-    setTimeout(() => {
-        document.querySelector('.modalContainer').style.display = "none"
-        document.querySelector('.modalContainer').style.width = "0%"
-    },1000)
-    
-}
-
-function fecharModal(){
-    setInterval(()=> {
-        document.querySelector('.modalContainer').style.display = "none"
-    },50)
-    
-    document.body.style.overflow = "auto"
-}
-
-

@@ -72,7 +72,7 @@ function mostrarProdutos(){
                     <div class="card" id="${produto.id}"'>
                         <img src="${produto.imagem}" alt="foto produto">
                         <h3>${produto.nome}</h3>
-                        <h4>${produto.preco}</h4>
+                        <h4>${Number(produto.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h4>
                         <button onclick='addCarrinho(${id})'>COMPRAR</button>
                     </div>`;
                 id ++

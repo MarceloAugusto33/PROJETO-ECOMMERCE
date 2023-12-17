@@ -11,30 +11,38 @@
 </head>
 <body>
     <div class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="produtosCarrinho">
-            <h1>Carrinho <span class="material-symbols-outlined">shopping_cart</span></h1>
-            <h2>Produtos:</h2>
-            <hr>
-            <button id="remove-all" onclick="esvaziarCarrinho()">REMOVER TUDO</button>
-            <div class="campoTotal">
-                <div class="icon">
-                    <h3>Total: </h3>
-                </div>
-                <p id="valorTotal">0.00</p>
-            </div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <span class="material-symbols-outlined">close</span>
+            <h2>MEU CARRINHO</h2>
+        </a>
+
+        <div class="statusCompra">
+            <span class="material-symbols-outlined" id="statusIcon">check_circle</span>
+            <h3 id="statusText">PRODUTO ADICIONADO NO CARRINHO!</h3>
         </div>
-        <div class="confirmarCompra">
-            <a href="carrinho.html"><button id="btnCompra">Confirmar Compra</button></a>
+        
+        <div class="carrinho">
+            <div class="container-produtos">
+                <ul class="lista-produtos">
+                    
+                </ul>
+            </div>
+            <div class="container-total">
+                <div class="valor-total">
+                    <h4>SUBTOTAL</h4>
+                    <output id="valorT">R$&nbsp;0,00</output>
+                </div>
+                <button onclick="finalizarCompra()">FINALIZAR COMPRA</button>
+
+            </div>
         </div>
     </div>
     <header>
         <nav class="nav-bar">
             <div class="logo">
-                <h1><a href="index.html">ElecHub</a></h1>
+                <h1><a href="index.html">ELECTHUB</a></h1>
             </div>
-            <div class="carrinho" onclick="openNav()">
-                
+            <div class="btn-carrinho" onclick="openNav()">
                 <span class="material-symbols-outlined">shopping_cart</span>
                 <h3 class="qtdItensCarrinho">0</h3>
             </div>
@@ -62,16 +70,7 @@
             
         </div>
     </main>
-    <div class="modal">
-        <div class="modalContainer">
-            <div class="modalConteudo">
-                <h3 id="modalStatus">PRODUTO ADICIONADO AO CARRINHO</h3>
-                <div class="compra">
-                    <span class="material-symbols-outlined">check_circle</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <footer>
         <div class="links">
             <h1>links Uteis</h1>
