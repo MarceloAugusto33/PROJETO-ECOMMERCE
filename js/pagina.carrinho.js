@@ -55,6 +55,16 @@ function verificarNuloLocalStorage(){
     }
 }
 
+let InputCep = document.querySelector("#input-cep");
+
+InputCep.addEventListener('input',(e) => {
+    let valorFinal = document.querySelector('.valor-final')
+    let letra = e.target.value
+    if(letra.length == 8 && !valorFinal){
+        buscarCEP()
+    }
+})
+
 
 function buscarCEP() {
     let cep = document.querySelector("#input-cep").value;
@@ -62,6 +72,7 @@ function buscarCEP() {
     let endereco = document.querySelector('.localidade')
     if(cep.length != 8 || cep == null || cep == undefined){
         paragrafoErro.innerHTML = "CEP INCORRETO"
+        endereco.innerHTML = ""
     } else{
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
             .then((response) => {
