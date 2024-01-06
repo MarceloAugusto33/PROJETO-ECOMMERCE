@@ -60,6 +60,7 @@ function addCarrinho(id) {
     verificarCarrinho()
 }
 
+
 //funçao para que quando mudar de resoluçao, o tamanho do carrinho se ajuste
 window.addEventListener('resize', () => {
     if (carrinho.classList.contains('.open')) {

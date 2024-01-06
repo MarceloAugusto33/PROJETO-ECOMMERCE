@@ -1,32 +1,32 @@
-document.addEventListener('DOMContentLoaded',() => {
+document.addEventListener('DOMContentLoaded', () => {
     mostrarProdutos();
     localStorage.removeItem('Carrinho')
 })
 
 //FUNÇAO PARA BUSCAR OS PRODUTOS FILTRADOS
-function buscarProduto(){
+function buscarProduto() {
     let inputBusca = document.querySelector('#input-busca').value;
     let containerProdutos = document.querySelector('.flex');
     let cancelarBusca = document.querySelector('.cancelarBusca');
 
     cancelarBusca.style.display = "block"
-    
-    if (verificarNulo(inputBusca)){
+
+    if (!inputBusca) {
         containerProdutos.innerHTML = `<h1>Produto não encontrado</h1>`
-    } else{
+    } else {
         containerProdutos.innerHTML = ""
         fetch("https://marceloaugusto33.github.io/PROJETO-ECOMMERCE/data/produtos.json")
-            .then((response) =>{
+            .then(response => {
                 return response.json();
             })
-            .then((jsonData) => {
+            .then(jsonData => {
                 let produtos = jsonData.produtos;
-                let pesquisados = produtos.filter((e) => e.nome.toUpperCase().includes(inputBusca.toUpperCase()))
-                if (pesquisados.length == 0){
+                let pesquisados = produtos.filter(e => e.nome.toUpperCase().includes(inputBusca.toUpperCase()))
+                if (pesquisados.length === 0) {
                     containerProdutos.innerHTML = `<h1>Produto não encontrado</h1>`
-                } else{
-                    pesquisados.map((produto) => {
-                    containerProdutos.innerHTML += `
+                } else {
+                    pesquisados.map(produto => {
+                        containerProdutos.innerHTML += `
                         <div class="card" id="${produto.id}">
                             <img src="${produto.imagem}" alt="foto produto">
                             <h3>${produto.nome}</h3>
@@ -36,38 +36,29 @@ function buscarProduto(){
                     })
                 }
             })
-            .catch(()=>{
+            .catch(err => {
                 console.log('url ERRADA')
             })
     }
 }
 
 
-//FUNÇAO PARA VERIFICAR SE O VALOR È NULO OU NAO
-function verificarNulo(valor){
-    if (valor == "" || valor == null || valor == undefined){
-        return true
-    } else{
-        return false
-    }
-}
-
 //FUNÇAO PARA PEGAR OS PRODUTOS DO JSON
-function mostrarProdutos(){
+function mostrarProdutos() {
     let containerProdutos = document.querySelector('.flex');
     let cancelarBusca = document.querySelector('.cancelarBusca');
     document.querySelector('#input-busca').value = ""
     cancelarBusca.style.display = "none"
 
     fetch("https://marceloaugusto33.github.io/PROJETO-ECOMMERCE/data/produtos.json")
-        .then((response) =>{
+        .then((response) => {
             return response.json();
         })
         .then((jsonData) => {
             containerProdutos.innerHTML = ""
             listaProdutos = jsonData.produtos
             let id = 1
-            listaProdutos.map((produto) => {
+            listaProdutos.map(produto => {
                 containerProdutos.innerHTML += `
                     <div class="card" id="${produto.id}"'>
                         <img src="${produto.imagem}" alt="foto produto">
@@ -75,10 +66,10 @@ function mostrarProdutos(){
                         <h4>${Number(produto.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h4>
                         <button onclick='addCarrinho(${id})'>ADICIONAR NO CARRINHO</button>
                     </div>`;
-                id ++
+                id++
             });
         })
-        .catch(() =>{
+        .catch(() => {
             containerProdutos.innerHTML = `<h1>Sem produtos<h1>`
             console.log('url ERRADA')
         })
