@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //FUNÇAO PARA BUSCAR OS PRODUTOS FILTRADOS
 function buscarProduto() {
-    let inputBusca = document.querySelector('#input-busca').value;
-    let containerProdutos = document.querySelector('.flex');
-    let cancelarBusca = document.querySelector('.cancelarBusca');
+    const inputBusca = document.querySelector('#input-busca').value;
+    const containerProdutos = document.querySelector('.flex');
+    const cancelarBusca = document.querySelector('.cancelarBusca');
 
     cancelarBusca.style.display = "block"
 
@@ -45,8 +45,9 @@ function buscarProduto() {
 
 //FUNÇAO PARA PEGAR OS PRODUTOS DO JSON
 function mostrarProdutos() {
-    let containerProdutos = document.querySelector('.flex');
-    let cancelarBusca = document.querySelector('.cancelarBusca');
+    const containerProdutos = document.querySelector('.flex');
+    const cancelarBusca = document.querySelector('.cancelarBusca');
+    
     document.querySelector('#input-busca').value = ""
     cancelarBusca.style.display = "none"
 

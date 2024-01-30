@@ -1,4 +1,4 @@
-let carrinho = document.querySelector('.overlay')
+const carrinho = document.querySelector('.overlay');
 
 let listaCarrinho = []
 //FUNÇAO DE ABRIR O CARRINHO
@@ -24,9 +24,9 @@ function closeNav() {
 //FUNÇAO DE ADICIONAR AO CARRINHO
 
 function addCarrinho(id) {
-    let icon = document.querySelector('#statusIcon');
-    let texto = document.querySelector('#statusText');
-    let modal = document.querySelector('.statusCompra')
+    const icon = document.querySelector('#statusIcon');
+    const texto = document.querySelector('#statusText');
+    const modal = document.querySelector('.statusCompra');
     if (listaCarrinho.includes(id)) {
         texto.innerHTML = "PRODUTO JA ADICIONADO AO CARRINHO!"
         icon.innerHTML = "block"
@@ -77,19 +77,19 @@ window.addEventListener('resize', () => {
 //FUNÇAO DE REMOVER DO CARRINHO
 
 function remove(id) {
-    let icon = document.querySelector('#statusIcon');
-    let texto = document.querySelector('#statusText');
-    let modal = document.querySelector('.statusCompra')
+    const icon = document.querySelector('#statusIcon');
+    const texto = document.querySelector('#statusText');
+    const modal = document.querySelector('.statusCompra');
     modal.style.display = "flex"
     texto.innerHTML = "PRODUTO REMOVIDO DO CARRINHO!"
     icon.innerHTML = "close"
     modal.style.backgroundColor = "red"
 
-    let produto = document.getElementById(id)
+    const produto = document.getElementById(id)
 
     produto.remove();
 
-    let index = listaCarrinho.indexOf(id);
+    const index = listaCarrinho.indexOf(id);
     if (index != -1) {
         listaCarrinho.splice(index, 1);
     }
@@ -98,21 +98,23 @@ function remove(id) {
 
 //FUNÇAO PARA VERIFICAR OS ITENS DO CARRINHO E O SEU VALOR
 function verificarCarrinho() {
+    const produtosNoCarrinho = document.querySelectorAll('.li-produto');
+    const qtdItensCarrinho = document.querySelector('.qtdItensCarrinho');
+    const valorT = document.querySelector('#valorT');
+
     let contador = 0
-    let produtosNoCarrinho = document.querySelectorAll('.li-produto');
-    let qtdItensCarrinho = document.querySelector('.qtdItensCarrinho')
-    let valorT = document.querySelector('#valorT')
     let index = 0
+
     if (produtosNoCarrinho.length == 0) {
         qtdItensCarrinho.innerHTML = index
-        let modal = document.querySelector('.statusCompra')
+        const modal = document.querySelector('.statusCompra')
         modal.style.display = "none"
 
     } else {
 
         produtosNoCarrinho.forEach((produto) => {
-            let div = produto.querySelector('.item-produto');
-            let valor = div.querySelector('.preco-produto').innerHTML;
+            const div = produto.querySelector('.item-produto');
+            const valor = div.querySelector('.preco-produto').innerHTML;
             let valorEmNumero = valor.replace(/[^\d,]/g, '');
 
             valorEmNumero = parseFloat(valorEmNumero);
@@ -134,12 +136,14 @@ function finalizarCompra() {
     if (listaCarrinho.length > 0) {
         window.location.href = 'carrinho.html'
     } else {
-        let icon = document.querySelector('#statusIcon');
-        let texto = document.querySelector('#statusText');
-        let modal = document.querySelector('.statusCompra')
-        modal.style.display = "flex"
-        texto.innerHTML = "CARRINHO VAZIO!"
-        icon.innerHTML = "shopping_cart"
-        modal.style.backgroundColor = "#242726"
+        const icon = document.querySelector('#statusIcon');
+        const texto = document.querySelector('#statusText');
+        const modal = document.querySelector('.statusCompra');
+
+
+        modal.style.display = "flex";
+        texto.innerHTML = "CARRINHO VAZIO!";
+        icon.innerHTML = "shopping_cart";
+        modal.style.backgroundColor = "#242726";
     }
 }

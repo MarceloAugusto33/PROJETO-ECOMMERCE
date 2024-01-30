@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style -->
     <link rel="stylesheet" href="css/carrinho.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- title -->
     <title>ElectHub</title>
+
+    <!-- script -->
+    <script src="js/pagina.carrinho.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav class="nav-bar">
@@ -32,18 +43,19 @@
             <div id="pr" class="flex">
 
             </div>
-            
+
         </section>
         <section class="cep">
             <h2>Insira o Cep para finalizar sua compra!</h2>
             <div class="form">
                 <label for="input-cep"><span class="material-symbols-outlined">location_on</span>CEP: </label>
-                <input type="number" placeholder="Insira seu cep..." id="input-cep" required onkeydown="evitarEnvioComEnter(event)">
+                <input type="number" placeholder="Insira seu cep..." id="input-cep" required
+                    onkeydown="evitarEnvioComEnter(event)">
                 <p id="erro"></p>
                 <button type="button" onclick="buscarCEP()">BUSCAR CEP</button>
-            <div class="localidade">
+                <div class="localidade">
 
-            </div>
+                </div>
         </section>
     </section>
     <div class="modal">
@@ -60,7 +72,7 @@
                 <div class="compra">
                     <span class="material-symbols-outlined">check_circle</span>
                 </div>
-                <a href="index.html"><button >PAGINA INICIAL</button></a>
+                <a href="index.html"><button>PAGINA INICIAL</button></a>
             </div>
         </div>
     </div>
@@ -70,12 +82,12 @@
             <h2><a href="https://www.linkedin.com/in/marcelo-augusto-8bb411271/" target="_blank">Linkedin</a></h2>
             <h2><a href="https://github.com/MarceloAugusto33" target="_blank">Github</a></h2>
             <h2><a href="https://marceloaugusto33.github.io/PORTIFOLIO/" target="_blank">Portifolio</a></h2>
-            
+
         </div>
         <div class="criador">
             <h1>Criado por <a href="mailto:sjsjsjmarcelo@gmail.com" target="_blank">Marcelo Augusto</a></h1>
         </div>
     </footer>
-    <script src="js/pagina.carrinho.js"></script>
 </body>
+
 </html>

@@ -1,124 +1,124 @@
 {
     "produtos": [
         {
-            "imagem":"https://m.media-amazon.com/images/I/61H-DMmO+SL._AC_SX679_.jpg",
-            "nome":"Apple iPhone 13 (256 GB)",
-            "preco":"4599.00",
-            "id":"1"
+            "imagem": "https://m.media-amazon.com/images/I/61H-DMmO+SL._AC_SX679_.jpg",
+            "nome": "Apple iPhone 13 (256 GB)",
+            "preco": "4599.00",
+            "id": "1"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61HfpqOu1RL._AC_SX679_.jpg",
-            "nome":"Console PlayStation® 5",
-            "preco":"3719.00",
-            "id":"2"
+            "imagem": "https://m.media-amazon.com/images/I/61HfpqOu1RL._AC_SX679_.jpg",
+            "nome": "Console PlayStation® 5",
+            "preco": "3719.00",
+            "id": "2"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61uxHT2J1sL._AC_SX679_.jpg",
-            "nome":"Console PlayStation® 4",
-            "preco":"2990.00",
-            "id":"3"
+            "imagem": "https://m.media-amazon.com/images/I/61uxHT2J1sL._AC_SX679_.jpg",
+            "nome": "Console PlayStation® 4",
+            "preco": "2990.00",
+            "id": "3"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61eYoSqkHnL._AC_SX679_.jpg",
-            "nome":"Console Xbox Series X",
-            "preco":"4400.00",
-            "id":"4"
+            "imagem": "https://m.media-amazon.com/images/I/61eYoSqkHnL._AC_SX679_.jpg",
+            "nome": "Console Xbox Series X",
+            "preco": "4400.00",
+            "id": "4"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61qK-bHdzLL._AC_SX425_.jpg",
-            "nome":"Console Nintendo Switch Joy-Con",
-            "preco":"1829.00",
-            "id":"5"
+            "imagem": "https://m.media-amazon.com/images/I/61qK-bHdzLL._AC_SX425_.jpg",
+            "nome": "Console Nintendo Switch Joy-Con",
+            "preco": "1829.00",
+            "id": "5"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/71sV-QnV8TL._AC_SX679_.jpg",
-            "nome":"Headphone Fone de Ouvido Havit HV-H2002d",
-            "preco":"149.00",
-            "id":"6"
+            "imagem": "https://m.media-amazon.com/images/I/71sV-QnV8TL._AC_SX679_.jpg",
+            "nome": "Headphone Fone de Ouvido Havit HV-H2002d",
+            "preco": "149.00",
+            "id": "6"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/51gz+-45-CL._AC_SX679_.jpg",
-            "nome":"Mouse Gamer Razer Deathadder Essential White Edition",
-            "preco":"138.00",
-            "id":"7"
+            "imagem": "https://m.media-amazon.com/images/I/51gz+-45-CL._AC_SX679_.jpg",
+            "nome": "Mouse Gamer Razer Deathadder Essential White Edition",
+            "preco": "138.00",
+            "id": "7"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61IVFGkcREL._AC_SX679_.jpg",
-            "nome":"Monitor Gamer AOC Hero 24' 144Hz IPS 1ms ",
-            "preco":"809.11",
-            "id":"8"
+            "imagem": "https://m.media-amazon.com/images/I/61IVFGkcREL._AC_SX679_.jpg",
+            "nome": "Monitor Gamer AOC Hero 24' 144Hz IPS 1ms ",
+            "preco": "809.11",
+            "id": "8"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61PrCgQ2KwL._AC_SX679_.jpg",
-            "nome":"Notebook Lenovo IdeaPad 3i i3-1115G4 4GB 256GB SSD",
-            "preco":"2290.00",
-            "id":"9"
+            "imagem": "https://m.media-amazon.com/images/I/61PrCgQ2KwL._AC_SX679_.jpg",
+            "nome": "Notebook Lenovo IdeaPad 3i i3-1115G4 4GB 256GB SSD",
+            "preco": "2290.00",
+            "id": "9"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61-ac8g9v-L._AC_SX679_.jpg",
-            "nome":"HUION HS611 Tablet de desenho gráfico",
-            "preco":"423.00",
-            "id":"10"
+            "imagem": "https://m.media-amazon.com/images/I/61-ac8g9v-L._AC_SX679_.jpg",
+            "nome": "HUION HS611 Tablet de desenho gráfico",
+            "preco": "423.00",
+            "id": "10"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/41dxVVHRNWL.__AC_SX300_SY300_QL70_ML2_.jpg",
-            "nome":"Controle DualSense - Branco",
-            "preco":"400.00",
-            "id":"11"
+            "imagem": "https://m.media-amazon.com/images/I/41dxVVHRNWL.__AC_SX300_SY300_QL70_ML2_.jpg",
+            "nome": "Controle DualSense - Branco",
+            "preco": "400.00",
+            "id": "11"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/8136lnf0n2L._AC_SX679_.jpg",
-            "nome":"God of War Ragnarök - Edição Standard - PlayStation 5",
-            "preco":"359.00",
-            "id":"12"
+            "imagem": "https://m.media-amazon.com/images/I/8136lnf0n2L._AC_SX679_.jpg",
+            "nome": "God of War Ragnarök - Edição Standard - PlayStation 5",
+            "preco": "359.00",
+            "id": "12"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/615iJV29LSL._AC_SX679_.jpg",
-            "nome":"Samsung T350 - Monitor Gamer, 24', FHD, 75Hz, HDMI, VGA, Freesync, Preto",
-            "preco":"579.00",
-            "id":"13"
+            "imagem": "https://m.media-amazon.com/images/I/615iJV29LSL._AC_SX679_.jpg",
+            "nome": "Samsung T350 - Monitor Gamer, 24', FHD, 75Hz, HDMI, VGA, Freesync, Preto",
+            "preco": "579.00",
+            "id": "13"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/81Yleainj1L.__AC_SY300_SX300_QL70_ML2_.jpg",
-            "nome":"HD SSD Kingston SA400S37 480GB",
-            "preco":"186.00",
-            "id":"14"
+            "imagem": "https://m.media-amazon.com/images/I/81Yleainj1L.__AC_SY300_SX300_QL70_ML2_.jpg",
+            "nome": "HD SSD Kingston SA400S37 480GB",
+            "preco": "186.00",
+            "id": "14"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/51N3N7TKsZL._AC_SX679_.jpg",
-            "nome":"Monitor Gamer LG UltraGear –Tela IPS de 24”, Full HD (1920 x 1080), 144Hz, 1ms ",
-            "preco":"888.00",
-            "id":"15"
+            "imagem": "https://m.media-amazon.com/images/I/51N3N7TKsZL._AC_SX679_.jpg",
+            "nome": "Monitor Gamer LG UltraGear –Tela IPS de 24”, Full HD (1920 x 1080), 144Hz, 1ms ",
+            "preco": "888.00",
+            "id": "15"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61+lZsNKGuL._AC_SX342_SY445_.jpg",
-            "nome":"EA Sports FC 24 - PlayStation 5",
-            "preco":"249.00",
-            "id":"16"
+            "imagem": "https://m.media-amazon.com/images/I/61+lZsNKGuL._AC_SX342_SY445_.jpg",
+            "nome": "EA Sports FC 24 - PlayStation 5",
+            "preco": "249.00",
+            "id": "16"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/719UOwWgaZL.__AC_SX300_SY300_QL70_ML2_.jpg",
-            "nome":"Headset Gamer HyperX Cloud Stinger para XBOX",
-            "preco":"169.00",
-            "id":"17"
+            "imagem": "https://m.media-amazon.com/images/I/719UOwWgaZL.__AC_SX300_SY300_QL70_ML2_.jpg",
+            "nome": "Headset Gamer HyperX Cloud Stinger para XBOX",
+            "preco": "169.00",
+            "id": "17"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61Ag4fqQg0L.__AC_SX300_SY300_QL70_ML2_.jpg",
-            "nome":"Base De PS5 Carregamento Do sens, Carregador Controle PS5-Padrão",
-            "preco":"149.00",
-            "id":"18"
+            "imagem": "https://m.media-amazon.com/images/I/61Ag4fqQg0L.__AC_SX300_SY300_QL70_ML2_.jpg",
+            "nome": "Base De PS5 Carregamento Do sens, Carregador Controle PS5-Padrão",
+            "preco": "149.00",
+            "id": "18"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/710SVJBnw+L._AC_SX300_SY300_.jpg",
-            "nome":"Tablet Samsung Galaxy Tab S6 Lite, 64GB, 4GB RAM, Tela Imersiva de 10.4'",
-            "preco":"1462.00",
-            "id":"19"
+            "imagem": "https://m.media-amazon.com/images/I/710SVJBnw+L._AC_SX300_SY300_.jpg",
+            "nome": "Tablet Samsung Galaxy Tab S6 Lite, 64GB, 4GB RAM, Tela Imersiva de 10.4'",
+            "preco": "1462.00",
+            "id": "19"
         },
         {
-            "imagem":"https://m.media-amazon.com/images/I/61obEib5uML.__AC_SX300_SY300_QL70_ML2_.jpg",
-            "nome":"Havit HV-MP830 - Mouse Pad Professional Gaming, 30x90 cm",
-            "preco":"52.00",
-            "id":"20"
+            "imagem": "https://m.media-amazon.com/images/I/61obEib5uML.__AC_SX300_SY300_QL70_ML2_.jpg",
+            "nome": "Havit HV-MP830 - Mouse Pad Professional Gaming, 30x90 cm",
+            "preco": "52.00",
+            "id": "20"
         }
     ]
 }

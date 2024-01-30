@@ -1,25 +1,30 @@
-html{
+html {
     scroll-behavior: smooth;
 }
-#titulo{
+
+#titulo {
     text-align: center;
     margin: 20px 0px;
 }
-.status{
+
+.status {
     margin: 70px 0px;
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
 }
-hr{
+
+hr {
     width: 20%;
 }
-h2{
+
+h2 {
     text-align: center;
     margin: 10px 0px 0px 20px;
 }
-.circulo{
+
+.circulo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,38 +35,46 @@ h2{
     background-color: #FF8C00;
     color: white;
 }
-#incompleto{
+
+#incompleto {
     background-color: transparent;
     color: black;
     border: 1px solid #FF8C00;
 }
-.card{
+
+.card {
     padding: 1rem;
 }
-.cep{
+
+.cep {
     padding: 1.2rem;
     transition: all 0.5s ease-in-out;
 }
-article > h1{
+
+article>h1 {
     text-align: center;
     font-size: 2em;
 }
-label{
+
+label {
     display: flex;
     align-items: center;
     color: black;
     font-weight: 600;
     font-size: 1.3em;
 }
-.form > input{
+
+.form>input {
     width: 100%;
     height: 50px;
     padding: 1rem;
 }
-.form > input:focus{
+
+.form>input:focus {
     outline: none;
 }
-.form > button{
+
+.form>button {
     margin: 20px 0px;
     width: 100%;
     height: 50px;
@@ -70,32 +83,38 @@ label{
     border: none;
     transition: all 0.3s;
 }
-.form > button:hover{
+
+.form>button:hover {
     background-color: #ab5e00;
 }
-#erro{
+
+#erro {
     color: red;
-    
+
 }
-.valor-final{
+
+.valor-final {
     margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem ;
+    padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.096);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.18);
     margin-bottom: 10px;
 }
-#valor-final{
+
+#valor-final {
     color: rgb(30, 152, 0);
     font-size: 1.2em;
 }
-.final{
+
+.final {
     display: flex;
     align-items: center;
 }
-#finalizarCompra{
+
+#finalizarCompra {
     margin: 20px 0px;
     width: 100%;
     height: 50px;
@@ -104,10 +123,12 @@ label{
     border: none;
     transition: all 0.3s;
 }
-#finalizarCompra:hover{
+
+#finalizarCompra:hover {
     background-color: rgb(0, 110, 0);
 }
-.modal{
+
+.modal {
     position: fixed;
     left: 0;
     top: 0;
@@ -118,7 +139,8 @@ label{
     align-items: center;
     justify-content: center;
 }
-.modalContainer{
+
+.modalContainer {
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.17);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.192);
@@ -127,24 +149,29 @@ label{
     padding: 2rem 1rem;
     transition: all 0.5s ease-in-out;
 }
-.compra{
-    display:flex;
+
+.compra {
+    display: flex;
     align-items: center;
     justify-content: center;
-  }
-.compra > span{
+}
+
+.compra>span {
     font-size: 8rem;
     color: green;
 }
-.modalConteudo{
+
+.modalConteudo {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.modalConteudo > h3{
+
+.modalConteudo>h3 {
     text-align: center;
 }
-.modalConteudo > a > button{
+
+.modalConteudo>a>button {
     width: 100%;
     height: 50px;
     background-color: rgb(35, 185, 1);
@@ -154,52 +181,61 @@ label{
     align-self: flex-end;
     margin-top: 50px;
 }
-.modalConteudo > a > button:hover{
+
+.modalConteudo>a>button:hover {
     background-color: rgb(26, 135, 1);
 }
-.modalConteudo > a{
+
+.modalConteudo>a {
     text-decoration: none;
 }
-.flex{
+
+.flex {
     padding: 1rem;
 }
-@media screen and (min-width:768px){
-    .container-carrinho{
+
+@media screen and (min-width:768px) {
+    .container-carrinho {
         display: flex;
         gap: 2%;
         margin-bottom: 20px;
         padding: 1rem;
     }
-    .container-produtos{
+
+    .container-produtos {
         border: 1px solid rgba(0, 0, 0, 0.17);
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.192);
         width: 60%;
         height: fit-content;
     }
-    .flex{
+
+    .flex {
         width: 100%;
         margin: 0px;
         padding: 1rem;
         align-items: center;
         justify-content: center;
     }
-    .cep{
+
+    .cep {
         width: 40%;
         border: 1px solid rgba(0, 0, 0, 0.17);
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.192);
         height: fit-content;
     }
-    
-    form > input{
+
+    form>input {
         width: 100%;
         height: 50px;
         padding: 1rem;
     }
-    main{
+
+    main {
         margin: 0px 0px 0px 20px;
         padding: 0;
     }
-    .card{
+
+    .card {
         height: 380px;
     }
 

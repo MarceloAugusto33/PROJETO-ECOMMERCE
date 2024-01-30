@@ -1,6 +1,8 @@
-if(verificarNuloLocalStorage()){
+if(!localStorage.getItem('Carrinho')){
     window.location.href = 'index.html'
 }
+
+
 function evitarEnvioComEnter(event) {
     
     if (event.keyCode === 13) {
@@ -12,12 +14,16 @@ function evitarEnvioComEnter(event) {
 
 
 let valor = 0
+
 document.addEventListener('DOMContentLoaded', () => {
     let produtosCarrinho = JSON.parse(localStorage.getItem('Carrinho'))
+
     for (let i = 0; i < produtosCarrinho.length; i++){
         produtosCarrinho[i] = `${produtosCarrinho[i]}`
     }
-    let divProdutos = document.querySelector('#pr')
+
+    const divProdutos = document.querySelector('#pr')
+
     fetch('https://marceloaugusto33.github.io/PROJETO-ECOMMERCE/data/produtos.json')
         .then((response) =>{
             return response.json()
@@ -45,20 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-
-
-function verificarNuloLocalStorage(){
-    if(localStorage.getItem('Carrinho') == "" || localStorage.getItem('Carrinho') == null || localStorage.getItem('Carrinho') == undefined){
-        return true
-    } else{
-        return false
-    }
-}
-
-let InputCep = document.querySelector("#input-cep");
+const InputCep = document.querySelector("#input-cep");
 
 InputCep.addEventListener('input',(e) => {
-    let valorFinal = document.querySelector('.valor-final')
+    const valorFinal = document.querySelector('.valor-final');
     let letra = e.target.value
     if(letra.length == 8 && !valorFinal){
         buscarCEP()
@@ -67,9 +63,9 @@ InputCep.addEventListener('input',(e) => {
 
 
 function buscarCEP() {
-    let cep = document.querySelector("#input-cep").value;
-    let paragrafoErro = document.querySelector('#erro')
-    let endereco = document.querySelector('.localidade')
+    const cep = document.querySelector("#input-cep").value;
+    const paragrafoErro = document.querySelector('#erro')
+    const endereco = document.querySelector('.localidade')
     if(cep.length != 8 || cep == null || cep == undefined){
         paragrafoErro.innerHTML = "CEP INCORRETO"
         endereco.innerHTML = ""
