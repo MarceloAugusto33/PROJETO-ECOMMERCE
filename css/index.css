@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #333;
     background-color: #f8f8f8;
 }
@@ -264,7 +264,7 @@ main>h2 {
     width: 100%;
     margin: 10px 0px;
     border: 1px solid rgba(0, 0, 0, 0.14);
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.102);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.235);
     transition: all 0.4s ease-in-out;
     background-color: white;
 }
